@@ -1,0 +1,10 @@
+.dropdown-toggle, .dropdown-item {
+    cursor: pointer;
+}
+
+/* ------------------------------------------------------------------------- Media Querriess */
+@media (min-width: 768px) {
+    .navbar-expand-md .navbar-collapse {
+        justify-content: flex-end;
+    }
+}

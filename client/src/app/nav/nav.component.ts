@@ -9,6 +9,7 @@ import { AccountService } from '../_services/account.service';
 export class NavComponent implements OnInit {
   model: any = {};
   loggedIn = false;
+  isCollapsed = true;
 
   constructor(private accountService: AccountService) { }
 

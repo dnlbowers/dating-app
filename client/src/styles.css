@@ -2,11 +2,3 @@
 main {
     margin-top: 100px;
 }
-
-
-/* ------------------------------------------------------------------------- Media Querriess */
-@media (min-width: 768px) {
-    .navbar-expand-md .navbar-collapse {
-        justify-content: flex-end;
-    }
-}
