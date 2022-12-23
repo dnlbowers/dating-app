@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-md justify-content-end navbar-dark fixed-top bg-dark">
+<nav class="navbar navbar-expand-md justify-content-end navbar-dark fixed-top bg-primary">
     <div class="container">
         <a class="navbar-brand mb-1" routerLink="/" routerLinkActive="active">Dating App  |</a>
         <button class="navbar-toggler mb-3" type="button" (click)="isCollapsed = !isCollapsed"
@@ -20,10 +20,10 @@
                 </ng-container>
             </ul>
 
-            <div class="dropdown" *ngIf="accountService.currentUser$ | async" dropdown>
+            <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
                 <a class="dropdown-toggle text-decoration-none" dropdownToggle role="button" data-bs-toggle="dropdown" 
                     aria-expanded="false">
-                        Welcome User!
+                        Welcome {{user.username | titlecase}}
                 </a>
                 <ul class="dropdown-menu mt-3" *dropdownMenu>
                     <li><a class="dropdown-item">Edit Profile</a></li>
@@ -50,7 +50,7 @@
                     placeholder="Password" 
                     aria-label="Enter your Password"
                 >
-                <button class="btn btn-outline-success" type="submit">Login</button>
+                <button class="btn btn-outline-secondary" type="submit">Login</button>
             </form>
         </div>
     </div>
