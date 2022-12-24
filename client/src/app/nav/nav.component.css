@@ -1,11 +1,11 @@
 /* ---------------------------------------------------------------------------- General styling */
 .text-aqua {
-    color: aqua;
+    color: #00ffff;
 }
 
 /* ---------------------------------------------------------------------------- Nav styling */
 .active {
-    color: aqua !important;
+    color: #00ffff !important;
     font-weight: bold !important;
 }
 
