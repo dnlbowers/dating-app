@@ -1,12 +1,19 @@
+/* ---------------------------------------------------------------------------- General styling */
+.text-aqua {
+    color: aqua;
+}
+
+/* ---------------------------------------------------------------------------- Nav styling */
 .active {
-    color: aqua!important;
+    color: aqua !important;
+    font-weight: bold !important;
 }
 
 .dropdown-toggle, .dropdown-item {
     cursor: pointer;
 }
 
-/* ------------------------------------------------------------------------- Media Querriess */
+/* ------------------------------------------------------------------------- Media Queries */
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-collapse {
         justify-content: flex-end;
