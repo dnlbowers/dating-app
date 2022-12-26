@@ -12,7 +12,6 @@ namespace API.Controllers
         public UsersController(IUserRepository userRepository)
         {
             _userRepository = userRepository;
-
         }
 
         [HttpGet]
