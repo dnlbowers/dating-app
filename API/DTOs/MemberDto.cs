@@ -11,7 +11,7 @@ namespace API.DTOs
 
         public int Age { get; set; }
 
-        public string KnowAs { get; set; }
+        public string KnownAs { get; set; }
 
         public DateTime Created { get; set; }
 
