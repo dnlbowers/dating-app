@@ -1,3 +1,4 @@
+/* ----------------------------------------------------------- memebers detail card */
 .img-thumbnail {
     margin: 25px;
     width: 85%;
@@ -11,4 +12,10 @@
 .card-footer {
     padding: 10px 15px;
     border-top: none;
+}
+
+/* -------------------------------------------------------------- ngx gallery styling */
+.ngx-gallery { 
+    display: inline-block; 
+    margin-bottom: 20px; 
 }
