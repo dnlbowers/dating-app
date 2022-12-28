@@ -3,6 +3,7 @@
         "datingapp",
         "hmac",
         "HMACSHA",
+        "tabset",
         "titlecase",
         "toastr"
     ]
