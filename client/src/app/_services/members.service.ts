@@ -1,6 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { map, of } from 'rxjs';
+import { map, of, tap } from 'rxjs';
 import { environment } from 'src/environments/environment';
 import { Member } from '../_models/member';
 
@@ -17,7 +17,7 @@ export class MembersService {
   getMembers() {
     if (this.members.length > 0) return of(this.members);
     return this.http.get<Member[]>(this.baseUrl + "users").pipe(
-      map(members => {
+      tap(members => {
         this.members = members;
         return members
       })
