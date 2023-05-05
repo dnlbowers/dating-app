@@ -24,7 +24,8 @@
             </ul>
 
             <div class="dropdown" *ngIf="(accountService.currentUser$ | async) as user" dropdown>
-                <a class="dropdown-toggle text-decoration-none text-aqua fw-bold" dropdownToggle role="button" data-bs-toggle="dropdown" 
+                <img src="{{ user.photoUrl || './assets/user.png '}}" alt="Profile Picture">
+                <a class="dropdown-toggle text-decoration-none text-aqua fw-bold ms-1" dropdownToggle role="button" data-bs-toggle="dropdown" 
                     aria-expanded="false">
                         Welcome {{user.username | titlecase}}
                 </a>

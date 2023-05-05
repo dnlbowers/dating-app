@@ -13,6 +13,12 @@
     cursor: pointer;
 }
 
+img {
+    max-height: 50px;
+    border: 2px solid white;
+    display: inline;
+}
+
 /* ------------------------------------------------------------------------- Media Queries */
 @media (min-width: 768px) {
     .navbar-expand-md .navbar-collapse {
