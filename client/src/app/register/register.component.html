@@ -5,25 +5,46 @@
     <div class="mb-3">
         <input type="text" 
         class="form-control" 
+        [class.is-invalid]="registerForm.get('username')?.errors && registerForm.get('username')?.touched"
         formControlName="username"
         placeholder="Username"
         >
+        <div class="invalid-feedback">Please enter a valid username</div>
+
     </div>
 
     <div class="mb-3">
         <input type="password" 
         class="form-control" 
+        [class.is-invalid]="registerForm.get('password')?.errors && registerForm.get('password')?.touched"
         formControlName="password"
         placeholder="Password"
         >
+        <div class="invalid-feedback" *ngIf="registerForm.get('password')?.hasError('required')">
+            Please enter a password
+        </div>
+        <div class="invalid-feedback" *ngIf="registerForm.get('password')?.hasError('minlength')">
+            Please ensure the password is more than 4 characters long.
+        </div>
+        <div class="invalid-feedback" *ngIf="registerForm.get('password')?.hasError('maxlength')">
+            Please must be at most 8 characters
+        </div>
+
     </div>
 
     <div class="mb-3">
         <input type="password" 
         class="form-control" 
+        [class.is-invalid]="registerForm.get('confirmPassword')?.errors && registerForm.get('confirmPassword')?.touched"
         formControlName="confirmPassword"
         placeholder="Confirm Password"
         >
+        <div class="invalid-feedback" *ngIf="registerForm.get('confirmPassword')?.hasError('required')">
+            Please enter a confirmation password
+        </div>
+        <div class="invalid-feedback" *ngIf="registerForm.get('confirmPassword')?.hasError('notMatching')">
+            Passwords do not match
+        </div>
     </div>
 
     <div class="text-center">
