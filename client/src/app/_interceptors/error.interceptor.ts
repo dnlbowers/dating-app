@@ -22,17 +22,17 @@ export class ErrorInterceptor implements HttpInterceptor {
           switch (error.status) {
             case 400:
               if (error.error.errors) {
-                const modelStateErrors = [];
+                const modalStateErrors = [];
                 for (const key in error.error.errors) {
                   if (error.error.errors[key]) {
-                    modelStateErrors.push(error.error.errors[key]);
+                    modalStateErrors.push(error.error.errors[key])
                   }
                 }
-                throw modelStateErrors.flat();
+                throw modalStateErrors.flat();
               } else {
-                this.toastr.error(error.error, error.status.toString());
+                this.toastr.error(error.statusText, error.status.toString());
               }
-              break
+              break;
             case 401:
               this.toastr.error('unauthorized', error.status.toString());
               break;
