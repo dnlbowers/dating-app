@@ -478,3 +478,7 @@ $RECYCLE.BIN/
 
 # appsettings 
 API/appsettings.json
+
+
+*/.idea/*
+.idea
