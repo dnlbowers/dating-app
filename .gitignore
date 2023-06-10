@@ -476,9 +476,14 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
+
+
 # appsettings 
 API/appsettings.json
 
 
 */.idea/*
 .idea
+/.config/dotnet-tools.json
+
+puml
